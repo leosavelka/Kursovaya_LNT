@@ -1,0 +1,47 @@
+<mxfile host="app.diagrams.net" modified="2024-01-11T15:25:44.193Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 YaBrowser/23.11.0.0 Safari/537.36" etag="E2h3-3KcuekFw386ZpKp" version="22.1.18" type="github">
+  <diagram name="Страница — 1" id="jYG83gXn8RyZTV5Urvnb">
+    <mxGraphModel dx="1181" dy="943" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="kwCmInaH_BRFaq4j6H1B-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="kwCmInaH_BRFaq4j6H1B-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kwCmInaH_BRFaq4j6H1B-1" value="Запуск программы" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="220" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kwCmInaH_BRFaq4j6H1B-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="kwCmInaH_BRFaq4j6H1B-3" target="kwCmInaH_BRFaq4j6H1B-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kwCmInaH_BRFaq4j6H1B-3" value="Выбор&lt;br&gt;шифрования/дешифрования" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="220" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kwCmInaH_BRFaq4j6H1B-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="kwCmInaH_BRFaq4j6H1B-4" target="kwCmInaH_BRFaq4j6H1B-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kwCmInaH_BRFaq4j6H1B-4" value="Ключ шифрования" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kwCmInaH_BRFaq4j6H1B-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="kwCmInaH_BRFaq4j6H1B-6" target="kwCmInaH_BRFaq4j6H1B-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kwCmInaH_BRFaq4j6H1B-6" value="Указание пути файла" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kwCmInaH_BRFaq4j6H1B-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="kwCmInaH_BRFaq4j6H1B-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="860" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kwCmInaH_BRFaq4j6H1B-8" value="Процесс шифрования или дешифрования" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="707" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kwCmInaH_BRFaq4j6H1B-11" value="Отображение результата" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="860" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
