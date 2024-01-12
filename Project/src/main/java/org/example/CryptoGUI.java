@@ -1,7 +1,7 @@
+package org.example;//Titenko
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.File;
 
 public class CryptoGUI extends JFrame {
@@ -10,8 +10,10 @@ public class CryptoGUI extends JFrame {
     private JRadioButton decryptionRadioButton = new JRadioButton("Дешифрование");
     private JTextField fileTextField = new JTextField(30);
     private JTextField keyTextField = new JTextField(30);
+    private JTextField generatedKeyTextField = new JTextField(30);
     private JButton browseButton = new JButton("Обзор");
     private JButton submitButton = new JButton("Выполнить");
+    private JButton generateKeyButton = new JButton("Сгенерировать ключ");
     private ButtonGroup buttonGroup = new ButtonGroup();
     private JFileChooser fileChooser = new JFileChooser();
 
@@ -53,12 +55,23 @@ public class CryptoGUI extends JFrame {
 
         gbc.gridx = 0;
         gbc.gridy++;
+        add(new JLabel("Сгенерированный ключ:"), gbc);
+
+        gbc.gridx++;
+        add(generatedKeyTextField, gbc);
+
+        gbc.gridx++;
+        add(generateKeyButton, gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy++;
         gbc.gridwidth = 3;
         gbc.anchor = GridBagConstraints.CENTER;
         add(submitButton, gbc);
 
         browseButton.addActionListener(e -> browseFile());
         submitButton.addActionListener(e -> displayInput());
+        generateKeyButton.addActionListener(e -> generateAESKey());
 
         pack();
         setLocationRelativeTo(null);
@@ -83,18 +96,25 @@ public class CryptoGUI extends JFrame {
             return;
         }
 
+        generatedKeyTextField.setText("");
+
         try {
             if ("Шифрование".equals(selectedAction)) {
-                FileEncryptor.encryptFile(filePath, "C:\\Users\\Вячеслав\\Desktop\\Новая папка\\Шифрованый.txt", key);
+                FileEncryptor.encryptFile(filePath, key);
                 JOptionPane.showMessageDialog(this, "Файл успешно зашифрован", "Результат", JOptionPane.INFORMATION_MESSAGE);
             } else if ("Дешифрование".equals(selectedAction)) {
-                FileEncryptor.decryptFile(filePath, "C:\\Users\\Вячеслав\\Desktop\\Новая папка\\Расшифрованный.txt", key);
+                FileEncryptor.decryptFile(filePath, key);
                 JOptionPane.showMessageDialog(this, "Файл успешно расшифрован", "Результат", JOptionPane.INFORMATION_MESSAGE);
             }
         } catch (Exception e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(this, "Ошибка при обработке файла", "Ошибка", JOptionPane.ERROR_MESSAGE);
         }
+    }
+
+    private void generateAESKey() {
+        String generatedKey = FileEncryptor.generateAESKey();
+        generatedKeyTextField.setText(generatedKey);
     }
 
     public static void main(String[] args) {
